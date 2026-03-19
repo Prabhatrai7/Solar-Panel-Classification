@@ -1,66 +1,45 @@
-🌞 Solar Panel Condition Classification using Deep Learning
+# 🌞 Solar Panel Condition Classification
 
-⚠️ Problem: Solar panels often lose efficiency due to dust, damage, and environmental factors, but manual inspection is slow, costly, and not scalable.
-💡 Solution: This project uses Deep Learning to automatically classify solar panel conditions from images, enabling faster and smarter maintenance.
+A Deep Learning-based system to automatically classify solar panel conditions using image data. This project helps in identifying faults and environmental impacts affecting solar panel efficiency.
 
-📌 Overview
+# 🚀 Problem Statement
 
-This project builds a multi-class image classification system to detect the condition of solar panels using Deep Learning.
-It helps identify issues like dust, physical damage, and environmental impact, improving energy efficiency and reducing maintenance costs.
+Solar panels are exposed to real-world conditions that reduce their performance, such as dust, bird droppings, physical damage, electrical faults, and snow coverage.
 
-🚀 Problem Statement
+Manual inspection of solar panels:
 
-Solar panels are exposed to harsh environmental conditions that affect their performance:
+Is time-consuming
 
-Dust accumulation reduces energy output
+Requires human effort
 
-Bird droppings block sunlight
+Is not scalable for large solar farms
 
-Physical damage (cracks, breakage) affects functionality
+This project aims to automate the detection process using a multi-class image classification model.
 
-Electrical damage impacts system efficiency
+#💡 Solution
 
-Snow coverage blocks solar absorption
+Developed a Deep Learning model that classifies solar panel images into multiple categories, enabling faster and more efficient monitoring.
 
-❌ Manual inspection challenges:
+# 🧠 Classes
 
-Time-consuming
+The model predicts the following 6 classes:
 
-Expensive
+Bird-drop
+Clean
+Dusty
+Electrical-damage
+Physical-Damage
+Snow-Covered
 
-Not feasible for large solar farms
+# ⚙️ Tech Stack
 
-👉 Goal: Automate detection using AI-based image classification.
-
-🧠 Classes Predicted
-
-The model classifies solar panel images into 6 categories:
-
-🐦 Bird-drop
-
-✅ Clean
-
-🌫️ Dusty
-
-⚡ Electrical-damage
-
-🔧 Physical-Damage
-
-❄️ Snow-Covered
-
-⚙️ Tech Stack
-
-Python 🐍
-
+Python
 TensorFlow / Keras
-
-NumPy & Pandas
-
 OpenCV
+NumPy, Pandas
+Matplotlib
 
-Matplotlib / Seaborn
-
-🏗️ Project Structure
+# 📂 Project Structure
 Solar-Panel-Classification/
 │── dataset/
 │   ├── Bird-drop/
@@ -77,63 +56,48 @@ Solar-Panel-Classification/
 │── predict.py
 │── requirements.txt
 │── README.md
-🔬 Model Architecture
 
+# 🔬 Model Details
+
+Multi-class Image Classification
 Built using CNN / Transfer Learning
 
-Multi-class classification with 6 outputs
-
+Output Layer:
 Dense(6, activation='softmax')
 
 Loss Function:
-
 categorical_crossentropy
-🔄 Workflow
 
-Data Collection & Organization
+# 🔄 Workflow
 
+Data Preparation
 Image Preprocessing & Augmentation
-
 Model Training
-
 Model Evaluation
+Prediction
 
-Prediction on New Images
+# 🚀 Getting Started
 
-📊 Results
-
-Successfully classified solar panel conditions into 6 categories
-
-Achieved strong performance on validation dataset
-
-Suitable for real-world monitoring systems
-
-▶️ How to Run
-1️⃣ Clone Repository
+Clone Repository
 git clone https://github.com/Prabhatrai7/Solar-Panel-Classification.git
 cd Solar-Panel-Classification
-2️⃣ Install Dependencies
+Install Dependencies
 pip install -r requirements.txt
-3️⃣ Train the Model
+Train Model
 python train.py
-4️⃣ Run Prediction
+Run Prediction
 python predict.py
-📈 Future Improvements
 
-Use EfficientNet / ResNet for higher accuracy
+# 📊 Results
 
-Deploy as a Streamlit Web App
+Successfully classifies solar panel conditions into 6 categories
 
-Integrate with Drone-based inspection systems
+Helps automate inspection and reduce manual effort
 
-Add severity-level classification
+# 🔮 Future Enhancements
 
-💡 Use Cases
+Improve accuracy using EfficientNet / ResNet
 
-Solar farm monitoring
+Deploy as a web application (Streamlit / Flask)
 
-Smart city infrastructure
-
-Renewable energy optimization
-
-Automated maintenance alerts
+Integrate with real-time monitoring systems
